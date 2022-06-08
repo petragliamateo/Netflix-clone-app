@@ -13,7 +13,7 @@ export default function Footer() {
     'Prueba de velocidad', 'Avisos legales', 'Solo en Netflix'];
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>¿Preguntas? Llama al 0800 345 1593</Text>
+      <Text style={styles.title}>¿Preguntas? Llama al 0000 000 0000</Text>
       <Text style={styles.flex}>
         {linksArray.map((link) => (
           <Text style={styles.link} key={linksArray.indexOf(link)}>

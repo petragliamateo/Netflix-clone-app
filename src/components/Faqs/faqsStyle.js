@@ -2,15 +2,12 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  container: {
-    display: 'flex',
-    borderBottomWidth: '8px',
-    borderBottomColor: '#222',
-  },
   inner: {
     display: 'flex',
     paddingVertical: '45px',
     maxWidth: '815px',
+    borderBottomWidth: '8px',
+    borderBottomColor: '#222',
   },
   item: {
     color: 'white',
@@ -41,7 +38,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     lineHeight: '1.1',
     marginTop: '0',
-    marginBottom: '8px',
+    marginBottom: '18px',
     color: 'white',
     textAlign: 'center',
   },

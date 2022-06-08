@@ -1,6 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import {
   View, Text, Image, TouchableOpacity, Animated,
@@ -8,6 +5,7 @@ import {
 
 import styles from './faqsStyle';
 import faqsData from '../../fixtures/faqs.json';
+import Email from '../Email';
 
 export default function Faqs() {
   const [isShow, setIsShow] = React.useState([]);
@@ -55,6 +53,8 @@ export default function Faqs() {
 
         </View>
       ))}
+
+      <Email />
     </View>
   );
 }
