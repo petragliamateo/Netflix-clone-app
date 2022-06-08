@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-color-literals */
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -12,7 +13,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontSize: '35px',
+    fontSize: '28px',
     lineHeight: '1.1',
     marginBottom: '8px',
     fontWeight: '600',

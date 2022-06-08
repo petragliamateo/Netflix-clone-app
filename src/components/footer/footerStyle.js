@@ -4,8 +4,9 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     display: 'flex',
-    paddingHorizontal: '40px',
-    paddingVertical: '60px',
+    paddingHorizontal: '24px',
+    paddingTop: '50px',
+    paddingBottom: '10px',
     marginHorizontal: '15px',
     maxWidth: '1000px',
     flexDirection: 'column',
@@ -19,9 +20,12 @@ const styles = StyleSheet.create({
   },
   link: {
     color: '#757575',
-    marginBottom: '20px',
+    marginBottom: '16px',
     fontSize: '13px',
-    width: '150px',
+    maxWidth: '190px',
+    minWidth: '120px',
+    flexBasis: '50%',
+    paddingRight: '12px',
   },
   title: {
     fontSize: '16px',
@@ -31,11 +35,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: '13px',
     color: '#757575',
-    marginBottom: '40px',
-  },
-  break: {
-    flexBasis: '100%',
-    height: '0',
+    marginVertical: '24px',
   },
 });
 

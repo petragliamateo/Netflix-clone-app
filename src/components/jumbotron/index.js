@@ -1,12 +1,33 @@
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/prop-types */
 import React from 'react';
-import { Text, Image, View } from 'react-native';
-import styles from './style';
+import { Text, View, Image } from 'react-native';
 
-export default function Jumbotron({ children }) {
-  console.log(children);
+import jumboData from '../../fixtures/jumbo.json';
+import styles from './jumbotronStyle';
+
+export default function Jumbotron() {
   return (
-    <Text style={styles.inner}>
-      {children}
-    </Text>
+    <View>
+
+      {jumboData.map((item) => (
+        <Text style={styles.inner} key={item.id}>
+
+          <Text style={styles.item}>
+            <Text style={styles.title}>
+              {item.title}
+            </Text>
+            <Text style={styles.subTitle}>
+              {item.subTitle}
+            </Text>
+            <Image style={styles.images} source={{ uri: item.image }} />
+            {item.video && <Text> Video </Text> }
+          </Text>
+
+        </Text>
+      ))}
+
+    </View>
+
   );
 }

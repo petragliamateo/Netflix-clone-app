@@ -4,16 +4,16 @@ import {
   View,
 } from 'react-native';
 
-import { JumbotronContainer, FooterContainer } from './src/containers';
+import { Jumbotron, Footer, Faqs } from './src/components';
 import styleGlobal from './styleGlobal';
 
 export default function App() {
   return (
     <View style={styleGlobal.body}>
 
-      <JumbotronContainer />
-
-      <FooterContainer />
+      <Jumbotron />
+      <Faqs />
+      <Footer />
 
     </View>
   );
