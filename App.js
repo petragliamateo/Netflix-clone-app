@@ -1,20 +1,21 @@
 /* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable react/jsx-filename-extension */
 import {
   View,
 } from 'react-native';
 
-import { Jumbotron, Footer, Faqs } from './src/components';
-import styleGlobal from './styleGlobal';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import { Home } from './src/pages';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styleGlobal.body}>
-
-      <Jumbotron />
-      <Faqs />
-      <Footer />
-
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" options={{ headerTransparent: true }} component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
