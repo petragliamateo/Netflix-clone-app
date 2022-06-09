@@ -14,7 +14,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" options={{ headerTransparent: true }} component={Home} />
+        <Stack.Screen name="Home" options={{ headerTransparent: true, title: '' }} component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );
