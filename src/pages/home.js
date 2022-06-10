@@ -8,7 +8,7 @@ import styleGlobal from '../../styleGlobal';
 export default function Signup({ navigation }) {
   return (
     <ScrollView style={styleGlobal.body}>
-      <Header />
+      <Header navigation={navigation} />
       <Jumbotron />
       <Faqs />
       <Footer />

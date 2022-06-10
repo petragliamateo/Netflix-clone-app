@@ -5,7 +5,7 @@ import {
 import styles from './headerStyle';
 import Email from '../Email';
 
-export default function Jumbotron() {
+export default function Header({ navigation }) {
   return (
     <View style={styles.inner}>
       <ImageBackground
@@ -20,7 +20,9 @@ export default function Jumbotron() {
           />
           <View style={styles.navLinks}>
             <Text style={styles.subTitle}>Español</Text>
-            <Text style={styles.button}>Iniciar Sesión</Text>
+            <Text style={styles.button} onPress={() => navigation.navigate('Signin')}>
+              Iniciar Sesión
+            </Text>
           </View>
         </View>
 

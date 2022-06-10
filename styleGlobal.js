@@ -9,6 +9,9 @@ const styles = StyleSheet.create({
     color: '#333333',
     fontSize: '16px',
   },
+  navigate: {
+    backgroundColor: '#000000',
+  },
 });
 
 export default styles;
