@@ -10,7 +10,9 @@ const styles = StyleSheet.create({
     padding: '25px',
   },
   base: {},
-  error: {},
+  error: {
+    backgroundColor: 'orange',
+  },
   input: {
     backgroundColor: '#252525',
     marginBottom: '15px',
@@ -20,7 +22,7 @@ const styles = StyleSheet.create({
     borderRadius: '5px',
   },
   inputFocus: {
-    backgroundColor: '#353535',
+    backgroundColor: '#444444',
     marginBottom: '15px',
     height: '60px',
     width: '100%',
@@ -40,6 +42,21 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: '16px',
     fontWeight: '400',
+  },
+  buttonValid: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginVertical: '15px',
+    height: '50px',
+    width: '100%',
+    borderRadius: '5px',
+    borderWidth: '1px',
+    borderColor: '#e50914',
+    color: 'white',
+    fontSize: '16px',
+    fontWeight: '400',
+    backgroundColor: '#e50914',
   },
   subTitle: {
     color: 'white',

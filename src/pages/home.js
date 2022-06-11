@@ -5,7 +5,7 @@ import {
 } from '../components';
 import styleGlobal from '../../styleGlobal';
 
-export default function Signup({ navigation }) {
+export default function Home({ navigation }) {
   return (
     <ScrollView style={styleGlobal.body}>
       <Header navigation={navigation} />

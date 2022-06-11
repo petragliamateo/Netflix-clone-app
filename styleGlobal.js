@@ -9,6 +9,13 @@ const styles = StyleSheet.create({
     color: '#333333',
     fontSize: '16px',
   },
+  bodyWhite: {
+    height: '100%',
+    fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
+    backgroundColor: '#ffffff',
+    color: '#333333',
+    fontSize: '16px',
+  },
   navigate: {
     backgroundColor: '#000000',
   },

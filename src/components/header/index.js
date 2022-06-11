@@ -29,7 +29,7 @@ export default function Header({ navigation }) {
         <View style={styles.main}>
           <Text style={styles.title}>Películas y series ilimitadas y mucho más.</Text>
           <Text style={styles.subTitle}>Disfruta donde quieras. Cancela cuando quieras.</Text>
-          <Email />
+          <Email navigation={navigation} />
         </View>
 
       </ImageBackground>

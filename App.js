@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unstable-nested-components */
-/* eslint-disable react/react-in-jsx-scope */
 import {
   View,
 } from 'react-native';
@@ -7,7 +6,9 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { Home, Signin } from './src/pages';
+import {
+  Home, Signin, Browse, Signup,
+} from './src/pages';
 import styles from './styleGlobal';
 
 import { firebase } from './src/lib/firebase';
@@ -40,6 +41,26 @@ export default function App() {
               headerTintColor: '#fff',
             }}
             component={Signin}
+          />
+          <Stack.Screen
+            name="Signup"
+            options={{
+              headerTitle: () => <LogoImage width={100} />,
+              headerStyle: styles.navigate,
+              headerShadowVisible: false,
+              headerTintColor: '#fff',
+            }}
+            component={Signup}
+          />
+          <Stack.Screen
+            name="Browse"
+            options={{
+              headerTitle: () => <LogoImage width={100} />,
+              headerStyle: styles.navigate,
+              headerShadowVisible: false,
+              headerTintColor: '#fff',
+            }}
+            component={Browse}
           />
         </Stack.Navigator>
       </NavigationContainer>

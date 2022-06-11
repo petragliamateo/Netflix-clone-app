@@ -5,34 +5,32 @@ import React from 'react';
 import styles from './formStyle';
 
 export default function Form({
-  email, setEmail, password, setPassword,
+  form, setForm, handleSignin,
 }) {
   const [focus, setFocus] = React.useState({ focusEmail: false, focusPassword: false });
-  const isInvalid = password === '' || email === '';
-
-  const handleSignin = (event) => {
-    event.preventDefault();
-  };
+  const isInvalid = form.password === '' || form.email === '';
 
   return (
     <View style={styles.container}>
+      <Text style={form.error ? styles.error : { display: 'hidden' }}>{form.error}</Text>
       <TextInput
         style={focus.focusEmail ? styles.inputFocus : styles.input}
         placeholder="Email o número de teléfono"
-        value={email}
-        onChange={({ target }) => setEmail(target.value)}
+        value={form.email}
+        onChange={({ target }) => setForm((prev) => ({ ...prev, email: target.value }))}
         onFocus={() => setFocus({ focusEmail: true, focusPassword: false })}
       />
       <TextInput
+        secureTextEntry
         style={focus.focusPassword ? styles.inputFocus : styles.input}
         placeholder="Contraseña"
-        value={password}
-        onChange={({ target }) => setPassword(target.value)}
+        value={form.password}
+        onChange={({ target }) => setForm((prev) => ({ ...prev, password: target.value }))}
         onFocus={() => setFocus({ focusEmail: false, focusPassword: true })}
       />
       <Text
-        style={styles.button}
-        onPress={handleSignin}
+        style={isInvalid ? styles.button : styles.buttonValid}
+        onPress={isInvalid ? '' : handleSignin}
       >
         Iniciar sesión
       </Text>
