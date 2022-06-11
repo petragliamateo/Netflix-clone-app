@@ -37,6 +37,7 @@ export default function App() {
               headerTitle: () => <LogoImage width={100} />,
               headerStyle: styles.navigate,
               headerShadowVisible: false,
+              headerTintColor: '#fff',
             }}
             component={Signin}
           />
