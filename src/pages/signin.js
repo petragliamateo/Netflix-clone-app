@@ -1,15 +1,14 @@
 import React from 'react';
 import { View } from 'react-native';
 import { FirebaseContext } from '../context.firebase';
+import { FormContext } from '../context.form';
 
 import styles from '../../styleGlobal';
 import FormIn from '../components/form/signin';
 
 export default function Signin({ navigation }) {
-  const [form, setForm] = React.useState({
-    email: '', password: '', error: '',
-  });
   const { firebase } = React.useContext(FirebaseContext);
+  const { form, setForm } = React.useContext(FormContext);
 
   const handleSignin = (event) => {
     event.preventDefault();
@@ -27,7 +26,7 @@ export default function Signin({ navigation }) {
 
   return (
     <View style={styles.body}>
-      <FormIn form={form} setForm={setForm} handleSignin={handleSignin} />
+      <FormIn handleSignin={handleSignin} />
     </View>
   );
 }

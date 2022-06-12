@@ -12,7 +12,7 @@ export default function Email({ navigation }) {
     <View style={styles.container}>
       <Text style={styles.text}>{title}</Text>
       <TextInput style={styles.input} placeholder="Email" />
-      <Text style={styles.button} onPress={() => navigation.navigate('Signup')}>
+      <Text style={styles.button} onPress={() => navigation.navigate('SignupModal')}>
         <Text>Comenzar  {'>'}</Text>
       </Text>
     </View>

@@ -2,11 +2,13 @@ import {
   Text, View, TextInput,
 } from 'react-native';
 import React from 'react';
+import { FormContext } from '../../../context.form';
 import styles from './formStyle';
 
 export default function Form({
-  form, setForm, handleSignin,
+  handleSignin,
 }) {
+  const { form, setForm } = React.useContext(FormContext);
   const [focus, setFocus] = React.useState({ focusEmail: false, focusPassword: false });
   const isInvalid = form.password === '' || form.email === '';
 
