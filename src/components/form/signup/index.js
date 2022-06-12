@@ -23,7 +23,6 @@ export default function Form({
       <Text style={styles.text}>
         Crea una cuenta para obtener más información sobre Netflix
       </Text>
-      <Text style={form.error ? styles.error : { display: 'hidden' }}>{form.error}</Text>
 
       <TextInput
         style={

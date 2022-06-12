@@ -71,10 +71,10 @@ const styles = StyleSheet.create({
     fontSize: '16px',
   },
   textSmall: {
-    color: 'white',
+    color: '#757575',
     textAlign: 'center',
     marginVertical: '15px',
-    fontSize: '14px',
+    fontSize: '12px',
   },
 });
 

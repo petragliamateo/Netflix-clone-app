@@ -39,7 +39,7 @@ export default function Form({
       <Text style={styles.text}>
         ¿Necesitas ayuda?
       </Text>
-      <Text style={styles.subTitle}>
+      <Text style={styles.subTitle} onPress={() => navigation.navigate('Home')}>
         ¿Primera vez en Netflix? Suscríbete ya.
       </Text>
       <Text style={styles.textSmall}>

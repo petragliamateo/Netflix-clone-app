@@ -26,7 +26,7 @@ export default function Signin({ navigation }) {
 
   return (
     <View style={styles.body}>
-      <FormIn handleSignin={handleSignin} />
+      <FormIn handleSignin={handleSignin} navigation={navigation} />
     </View>
   );
 }
