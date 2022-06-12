@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -9,13 +8,17 @@ import {
 } from './pages';
 import styles from '../styleGlobal';
 import LogoImage from './components/LogoImage';
+import { useAuth } from './hooks';
 
 const Stack = createNativeStackNavigator();
 
 export default function Navigations() {
+  const user = useAuth();
+  console.log(user);
+
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName={user ? 'Browse' : 'Home'}>
         <Stack.Screen
           name="Home"
           options={{
@@ -85,10 +88,10 @@ function HeaderHome() {
   const navigation = useNavigation();
   return (
     <View style={styles.headerHome}>
-        <LogoImage
-          src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Netflix_2015_N_logo.svg"
-          width={21} height={40}
-        />
+      <LogoImage
+        src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Netflix_2015_N_logo.svg"
+        width={21} height={40}
+      />
 
       <View style={styles.headerButtonsContainer}>
         <Text style={styles.headerButtonsWhite}>PRIVACIDAD</Text>

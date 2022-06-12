@@ -14,7 +14,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'orange',
   },
   input: {
-    backgroundColor: '#252525',
+    backgroundColor: '#333333',
+    color: '#ffffff',
     marginBottom: '15px',
     height: '60px',
     width: '100%',
@@ -23,6 +24,7 @@ const styles = StyleSheet.create({
   },
   inputFocus: {
     backgroundColor: '#444444',
+    color: '#ffffff',
     marginBottom: '15px',
     height: '60px',
     width: '100%',

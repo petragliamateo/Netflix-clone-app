@@ -12,15 +12,19 @@ export default function Signin({ navigation }) {
 
   const handleSignin = (event) => {
     event.preventDefault();
+    setForm((prev) => ({ ...prev, loading: true }));
 
     firebase
       .auth()
       .signInWithEmailAndPassword(form.email, form.password)
       .then(() => {
         navigation.navigate('Browse');
+        setForm((prev) => ({ ...prev, loading: false }));
       })
       .catch((error) => {
-        setForm({ email: '', password: '', error: error.message });
+        setForm({
+          email: '', password: '', error: error.message, loading: false,
+        });
       });
   };
 

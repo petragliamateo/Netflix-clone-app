@@ -34,7 +34,7 @@ export default function Form({
         style={isInvalid ? styles.button : styles.buttonValid}
         onPress={isInvalid ? '' : handleSignin}
       >
-        Iniciar sesión
+        {form.loading ? 'Loading..' : 'Iniciar sesión'}
       </Text>
       <Text style={styles.text}>
         ¿Necesitas ayuda?

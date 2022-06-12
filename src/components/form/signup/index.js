@@ -53,7 +53,7 @@ export default function Form({
         style={styles.button}
         onPress={isValid ? handleSignup : ''}
       >
-        Continuar
+        {form.loading ? 'Loading..' : 'Continuar'}
       </Text>
     </View>
   );

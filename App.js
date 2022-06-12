@@ -1,8 +1,3 @@
-/* eslint-disable react/no-unstable-nested-components */
-import {
-  View,
-} from 'react-native';
-
 import React from 'react';
 
 import { firebase } from './src/lib/firebase';
@@ -13,7 +8,7 @@ import Navigations from './src/Navigations';
 
 export default function App() {
   const [form, setForm] = React.useState({
-    email: '', password: '', error: '',
+    email: '', password: '', error: '', loading: false,
   });
 
   return (
