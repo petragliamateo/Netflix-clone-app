@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { Text, View } from 'react-native';
 import {
-  Home, Signin, Browse, Signup, SignupModal,
+  Home, Signin, Browse, Signup, SignupModal
 } from './pages';
 import styles from '../styleGlobal';
 import LogoImage from './components/LogoImage';

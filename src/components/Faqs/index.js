@@ -6,6 +6,7 @@ import {
 import styles from './faqsStyle';
 import faqsData from '../../fixtures/faqs.json';
 import Email from '../Email';
+import { plus } from '../../../public/images';
 
 export default function Faqs() {
   const [isShow, setIsShow] = React.useState([]);
@@ -38,7 +39,7 @@ export default function Faqs() {
                 />
               ) : (
                 <Image
-                  source={{ uri: 'https://icon-library.com/images/white-plus-icon/white-plus-icon-3.jpg' }}
+                  source={{ uri: plus }}
                   style={{ width: '15px', height: '15px' }}
                 />
               )}

@@ -1,16 +1,28 @@
 import { View, Text } from 'react-native';
-import { logoN, userImages } from '../../../../public/images';
+
+import {
+  logoN, userImages, search, cast,
+} from '../../../../public/images';
 import LogoImage from '../../LogoImage';
 import { styles } from './elementsStyle';
 
-function TopHeader({ profile }) {
+function TopHeader({ profile, setModalVisible, modalVisible }) {
   return (
     <View style={styles.topHeader}>
       <LogoImage src={logoN} width={21} height={40} />
       <View style={styles.topHeaderItems}>
-        <LogoImage src={userImages[profile.photoURL]} width={40} height={40} />
-        <LogoImage src={userImages[profile.photoURL]} width={40} height={40} />
-        <LogoImage src={userImages[profile.photoURL]} width={40} height={40} />
+        <Text>
+          <LogoImage src={cast} width={20} height={15} />
+        </Text>
+
+        <Text>
+          <LogoImage src={search} width={20} height={20} />
+        </Text>
+
+        <Text onPress={() => setModalVisible(!modalVisible)}>
+          <LogoImage src={userImages[profile.photoURL]} width={20} height={20} radius={5} />
+        </Text>
+
       </View>
     </View>
   );

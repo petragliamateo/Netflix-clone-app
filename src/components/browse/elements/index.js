@@ -1,22 +1,34 @@
 import { View, ScrollView } from 'react-native';
+import { useState } from 'react';
 import { styles } from './elementsStyle';
 import { TopHeader, BotHeader } from './header';
 import Main from './main';
+import ProfileSetupModal from './profileSetupModal';
 
 export default function BrowseHeader({ profile }) {
+  const [modalVisible, setModalVisible] = useState(false);
+
   return (
-    <ScrollView
-      stickyHeaderIndices={[1]}
-      stickyHeaderHiddenOnScroll
-    >
-      <TopHeader profile={profile} />
+    <View>
+      <ProfileSetupModal modalVisible={modalVisible} setModalVisible={setModalVisible} />
 
-      <BotHeader />
+      <ScrollView
+        stickyHeaderIndices={[1]}
+        stickyHeaderHiddenOnScroll
+      >
+        <TopHeader
+          profile={profile}
+          modalVisible={modalVisible}
+          setModalVisible={setModalVisible}
+        />
 
-      <Main />
+        <BotHeader />
 
-      <View style={styles.container} />
+        <Main />
 
-    </ScrollView>
+        <View style={styles.container} />
+
+      </ScrollView>
+    </View>
   );
 }

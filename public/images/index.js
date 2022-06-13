@@ -10,3 +10,8 @@ export const loading = 'https://media.wired.com/photos/592744d3f3e2356fd800bf00/
 export const edit = 'https://flyclipart.com/thumb2/white-edit-icon-728162.png';
 export const add = 'https://cdn-icons-png.flaticon.com/512/262/262038.png';
 export const logoN = 'https://upload.wikimedia.org/wikipedia/commons/0/0c/Netflix_2015_N_logo.svg';
+export const plus = 'https://icon-library.com/images/white-plus-icon/white-plus-icon-3.jpg';
+export const info = 'https://icon-library.com/images/information-icon-white/information-icon-white-6.jpg';
+export const play = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU8sayn7Smd2HprQmuRE1e9HhRYeKapowbYw&usqp=CAU';
+export const search = 'https://www.seekpng.com/png/full/920-9209972_magnifying-glass-png-white-search-icon-white-png.png';
+export const cast = 'https://www.pikpng.com/pngl/b/439-4393686_chromecast-icon-png-transparent-background-polk-command-bar.png';
