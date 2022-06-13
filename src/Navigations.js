@@ -9,12 +9,12 @@ import {
 import styles from '../styleGlobal';
 import LogoImage from './components/LogoImage';
 import { useAuth } from './hooks';
+import { logoN } from '../public/images';
 
 const Stack = createNativeStackNavigator();
 
 export default function Navigations() {
   const user = useAuth();
-  console.log(user);
 
   return (
     <NavigationContainer>
@@ -47,8 +47,7 @@ export default function Navigations() {
         <Stack.Screen
           name="Browse"
           options={{
-            headerTransparent: true,
-            header: () => <HeaderBrowse />,
+            headerShown: false
           }}
           component={Browse}
         />
@@ -87,7 +86,7 @@ function HeaderHome() {
   return (
     <View style={styles.headerHome}>
       <LogoImage
-        src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Netflix_2015_N_logo.svg"
+        src={logoN}
         width={21} height={40}
       />
 
@@ -96,22 +95,6 @@ function HeaderHome() {
         <Text style={styles.headerButtonsWhite} onPress={() => navigation.navigate('Signin')}>INICIAR SESIÓN</Text>
         <Text style={styles.headerButtons}>...</Text>
       </View>
-    </View>
-  );
-}
-
-function HeaderBrowse() {
-  const navigation = useNavigation();
-  return (
-    <View style={styles.headerHome}>
-      <Text style={styles.headerBrowseItems} />
-      <LogoImage style={styles.headerBrowseItems} />
-      <LogoImage
-        style={styles.headerBrowseItems}
-        src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-hKQIYDFZlOFGco6kdAklHCoN_hv0NqzvsUoMji-y0JMR95Lu7bL6orUCtRgiMmgZX80&usqp=CAU'
-        width={30}
-        height={30}  
-      />
     </View>
   );
 }

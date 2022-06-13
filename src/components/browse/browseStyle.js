@@ -6,8 +6,8 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: '50%',
-    paddingHorizontal: '15%',
+    paddingVertical: '40%',
+    paddingHorizontal: '10%',
   },
   title: {
     color: '#ffffff',
@@ -21,8 +21,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   user: {
-    margin: '20px',
+    marginTop: '20px',
+    marginHorizontal: '20px',
     display: 'flex',
+    maxWidth: '100px',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
@@ -31,6 +33,19 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: '12px',
     margin: '5px',
+  },
+  headerBrowseItems: {
+    flex: '0',
+    backgroundColor: 'red',
+    margin: '15px',
+  },
+  header: {
+    height: '60px',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '15px',
   },
 });
 
