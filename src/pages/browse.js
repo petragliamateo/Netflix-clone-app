@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import { useContent } from '../hooks';
 import selectionFilter from '../utils/selectionFilter';
 import BrowseComponent from '../components/browse';
+import styles from '../../styleGlobal';
 
 export default function Browse() {
   const { series } = useContent('series');
@@ -11,7 +12,7 @@ export default function Browse() {
   console.log(slides);
 
   return (
-    <View>
+    <View style={styles.body}>
       <BrowseComponent />
     </View>
   );

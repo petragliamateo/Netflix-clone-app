@@ -47,10 +47,8 @@ export default function Navigations() {
         <Stack.Screen
           name="Browse"
           options={{
-            headerTitle: () => <LogoImage width={100} />,
-            headerStyle: styles.navigate,
-            headerShadowVisible: false,
-            headerTintColor: '#fff',
+            headerTransparent: true,
+            header: () => <HeaderBrowse />,
           }}
           component={Browse}
         />
@@ -98,6 +96,22 @@ function HeaderHome() {
         <Text style={styles.headerButtonsWhite} onPress={() => navigation.navigate('Signin')}>INICIAR SESIÓN</Text>
         <Text style={styles.headerButtons}>...</Text>
       </View>
+    </View>
+  );
+}
+
+function HeaderBrowse() {
+  const navigation = useNavigation();
+  return (
+    <View style={styles.headerHome}>
+      <Text style={styles.headerBrowseItems} />
+      <LogoImage style={styles.headerBrowseItems} />
+      <LogoImage
+        style={styles.headerBrowseItems}
+        src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-hKQIYDFZlOFGco6kdAklHCoN_hv0NqzvsUoMji-y0JMR95Lu7bL6orUCtRgiMmgZX80&usqp=CAU'
+        width={30}
+        height={30}  
+      />
     </View>
   );
 }

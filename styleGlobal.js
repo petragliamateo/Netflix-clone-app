@@ -53,6 +53,11 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: '14px',
   },
+  headerBrowseItems: {
+    flex: '0',
+    backgroundColor: 'red',
+    margin: '15px',
+  },
 });
 
 export default styles;
