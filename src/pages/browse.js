@@ -13,7 +13,7 @@ export default function Browse() {
 
   return (
     <View style={styles.body}>
-      <BrowseComponent />
+      <BrowseComponent slides={slides} />
     </View>
   );
 }

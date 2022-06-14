@@ -18,7 +18,7 @@ function TopHeader({ profile }) {
           <LogoImage src={cast} width={20} height={15} />
         </Text>
 
-        <Text>
+        <Text onPress={() => navigation.navigate('Search')}>
           <LogoImage src={search} width={20} height={20} />
         </Text>
 
@@ -31,11 +31,15 @@ function TopHeader({ profile }) {
   );
 }
 
-function BotHeader() {
+function BotHeader({ setCategory }) {
   return (
     <View style={styles.botHeader}>
-      <Text style={styles.botHeaderItems}>Series</Text>
-      <Text style={styles.botHeaderItems}>Películas</Text>
+      <Text style={styles.botHeaderItems} onPress={() => setCategory('series')}>
+        Series
+      </Text>
+      <Text style={styles.botHeaderItems} onPress={() => setCategory('films')}>
+        Películas
+      </Text>
       <Text style={styles.botHeaderItems}>Categorías</Text>
     </View>
   );

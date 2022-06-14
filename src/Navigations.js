@@ -4,12 +4,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { Text, View } from 'react-native';
 import {
-  Home, Signin, Browse, Signup, SignupModal, ProfileSetup
+  Home, Signin, Browse, Signup, SignupModal, ProfileSetup, Search
 } from './pages';
 import styles from '../styleGlobal';
 import LogoImage from './components/LogoImage';
 import { useAuth } from './hooks';
-import { logoN } from '../public/images';
+import { cast, logoN, userImages } from '../public/images';
 
 const Stack = createNativeStackNavigator();
 
@@ -72,6 +72,26 @@ export default function Navigations() {
               }
             }}
             component={ProfileSetup}
+          />
+          <Stack.Screen
+            name="Search"
+            options={{
+              headerRight: () => (
+                <View style={{
+                  display: 'flex', flexDirection: 'row', margin: '15px', width: '60px', justifyContent: 'space-between'
+                }}>
+                  <LogoImage src={cast} width={25} height={20} />
+                  <LogoImage src={userImages[user.photoURL]} width={20} height={20} radius={5} />
+                </View>
+              ),
+              headerTitle: '',
+              headerShadowVisible: false,
+              headerTintColor: '#fff',
+              headerStyle: {
+                backgroundColor: '#000000',
+              }
+            }}
+            component={Search}
           />
         </Stack.Group>
       </Stack.Navigator>

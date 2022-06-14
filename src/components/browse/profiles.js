@@ -1,7 +1,7 @@
 import { Text, View, Image } from 'react-native';
 import styles from './browseStyle';
 import LogoImage from '../LogoImage';
-import { userImages } from '../../../public/images';
+import { userImages, edit, add } from '../../../public/images';
 
 export function SelectProfile({ user, setProfile }) {
   return (
@@ -11,7 +11,7 @@ export function SelectProfile({ user, setProfile }) {
         <LogoImage style={styles.headerBrowseItems} />
         <LogoImage
           style={styles.headerBrowseItems}
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-hKQIYDFZlOFGco6kdAklHCoN_hv0NqzvsUoMji-y0JMR95Lu7bL6orUCtRgiMmgZX80&usqp=CAU"
+          src={edit}
           width={30}
           height={30}
         />
@@ -41,7 +41,7 @@ export function SelectProfile({ user, setProfile }) {
 
           <View style={styles.user}>
             <Image
-              source="https://image.jimcdn.com/app/cms/image/transf/none/path/s14afea31fbe407bb/image/iceb537822149c208/version/1586556435/image.png"
+              source={add}
               style={{ width: 80, height: 80 }}
             />
             <Text style={styles.name}>Añadir perfil</Text>

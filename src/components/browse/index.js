@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable no-nested-ternary */
 import { View } from 'react-native';
 import { useContext, useState, useEffect } from 'react';
@@ -5,25 +6,30 @@ import { useContext, useState, useEffect } from 'react';
 import { SelectProfile } from './profiles';
 import { FirebaseContext } from '../../context.firebase';
 import LoadingScreen from './LoadingScreen';
-import BrowseHeader from './elements';
+import BrowsePage from './elements';
 
-export default function BrowseComponent() {
+export default function BrowseComponent({ slides }) {
+  const [category, setCategory] = useState('');
+  const [slideRows, setSlideRows] = useState([]);
   const [profile, setProfile] = useState({});
   const [loadingScreen, setLoadingScreen] = useState(true);
   const { firebase } = useContext(FirebaseContext);
   const user = firebase.auth().currentUser || {};
 
   useEffect(() => {
-    console.log('profile', profile);
     setTimeout(() => {
       setLoadingScreen(false);
     }, 3000);
   }, [profile.displayName]);
 
+  useEffect(() => {
+    setSlideRows(category === '' ? [...slides.series, ...slides.films] : slides[category]);
+  }, [slides, category]);
+
   return (profile.displayName ? (
     loadingScreen ? (
       <LoadingScreen />
-    ) : <BrowseHeader profile={profile} />
+    ) : <BrowsePage profile={profile} slideRows={slideRows} setCategory={setCategory} category={category} />
   ) : (
     user.displayName ? (
       <View>

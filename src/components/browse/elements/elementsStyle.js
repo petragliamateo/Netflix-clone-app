@@ -30,9 +30,6 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     width: '120px',
   },
-  container: {
-    height: '1500px',
-  },
 
   mainContainer: {
     display: 'flex',

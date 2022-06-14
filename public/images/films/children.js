@@ -1,0 +1,10 @@
+export const despicableMeSmall = 'https://raw.githubusercontent.com/karlhadwen/netflix/master/public/images/films/children/despicable-me/small.jpg';
+export const despicableMeLarge = 'https://raw.githubusercontent.com/karlhadwen/netflix/master/public/images/films/children/despicable-me/large.jpg';
+export const frozenSmall = 'https://raw.githubusercontent.com/karlhadwen/netflix/master/public/images/films/children/frozen/small.jpg';
+export const frozenLarge = 'https://github.com/karlhadwen/netflix/blob/master/public/images/films/children/frozen/large.jpg?raw=true';
+export const hotelTransylvaniaSmall = 'https://github.com/karlhadwen/netflix/blob/master/public/images/films/children/hotel-transylvania/small.jpg?raw=true';
+export const hotelTransylvaniaLarge = 'https://github.com/karlhadwen/netflix/blob/master/public/images/films/children/hotel-transylvania/large.jpg?raw=true';
+export const spiritedAwaySmall = 'https://github.com/karlhadwen/netflix/blob/master/public/images/films/children/spirited-away/small.jpg?raw=true';
+export const spiritedAwayLarge = 'https://github.com/karlhadwen/netflix/blob/master/public/images/films/children/spirited-away/large.jpg?raw=true';
+export const upSmall = 'https://github.com/karlhadwen/netflix/blob/master/public/images/films/children/up/small.jpg?raw=true';
+export const upLarge = 'https://github.com/karlhadwen/netflix/blob/master/public/images/films/children/up/large.jpg?raw=true';
