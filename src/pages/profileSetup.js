@@ -19,12 +19,10 @@ const styles = StyleSheet.create({
   },
   perfiles: {
     width: '100%',
-    borderBottomWidth: '1px',
-    borderBottomColor: '#666666',
-    marginHorizontal: '20px'
+    marginHorizontal: '20px',
   },
   text: {
-    color: '#ffffff',
+    color: '#dddddd',
   },
   menuContainer: {
     display: 'flex',
@@ -32,12 +30,17 @@ const styles = StyleSheet.create({
     width: '100%',
     fontSize: '18px',
     fontWeight: '500',
-    color: '#ffffff',
+    color: '#dddddd',
     marginHorizontal: '20px',
   },
   menu: {
     marginBottom: '10px',
   },
+  myList: {
+    marginBottom: '10px',
+    borderBottomColor: '#666666',
+    borderBottomWidth: '1px',
+  }
 });
 
 export default function ProfileSetup() {
@@ -53,12 +56,10 @@ export default function ProfileSetup() {
           <Text style={styles.text}>Administrar perfiles</Text>
         </View>
 
-        <Text style={styles.text}>Mi lista</Text>
       </View>
 
-      <Text>hr</Text>
-
       <Text style={styles.menuContainer}>
+        <Text style={styles.myList}>Mi lista</Text>
         <Text style={styles.menu}>Configuración de app</Text>
         <Text style={styles.menu}>Cuenta</Text>
         <Text style={styles.menu}>Ayuda</Text>
