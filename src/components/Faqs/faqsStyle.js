@@ -4,14 +4,18 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   inner: {
     display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
     paddingVertical: '45px',
-    maxWidth: '815px',
     borderBottomWidth: '8px',
     borderBottomColor: '#222',
   },
   item: {
     color: 'white',
     marginBottom: '10px',
+    width: '100%',
+    maxWidth: '800px',
   },
   header: {
     display: 'flex',
@@ -32,6 +36,8 @@ const styles = StyleSheet.create({
     lineHeight: '22px',
     backgroundColor: '#303030',
     padding: '22px',
+    width: '100%',
+    maxWidth: '800px',
   },
   title: {
     fontSize: '28px',

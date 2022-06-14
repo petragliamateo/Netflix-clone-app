@@ -1,4 +1,5 @@
 import { View, Text } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import {
   logoN, userImages, search, cast,
@@ -6,7 +7,9 @@ import {
 import LogoImage from '../../LogoImage';
 import { styles } from './elementsStyle';
 
-function TopHeader({ profile, setModalVisible, modalVisible }) {
+function TopHeader({ profile }) {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.topHeader}>
       <LogoImage src={logoN} width={21} height={40} />
@@ -19,7 +22,7 @@ function TopHeader({ profile, setModalVisible, modalVisible }) {
           <LogoImage src={search} width={20} height={20} />
         </Text>
 
-        <Text onPress={() => setModalVisible(!modalVisible)}>
+        <Text onPress={() => navigation.navigate('ProfileSetup')}>
           <LogoImage src={userImages[profile.photoURL]} width={20} height={20} radius={5} />
         </Text>
 

@@ -8,6 +8,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     height: '100%',
     padding: '25px',
+    maxWidth: '800px',
+    marginHorizontal: 'auto',
   },
   base: {},
   error: {

@@ -7,10 +7,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: '24px',
     paddingTop: '50px',
     paddingBottom: '10px',
-    marginHorizontal: '15px',
-    maxWidth: '1000px',
+    marginHorizontal: 'auto',
+    width: '100%',
+    maxWidth: '800px',
     flexDirection: 'column',
-    textAlign: 'left',
   },
   flex: {
     display: 'flex',

@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { Text, View } from 'react-native';
 import {
-  Home, Signin, Browse, Signup, SignupModal
+  Home, Signin, Browse, Signup, SignupModal, ProfileSetup
 } from './pages';
 import styles from '../styleGlobal';
 import LogoImage from './components/LogoImage';
@@ -60,6 +60,18 @@ export default function Navigations() {
               headerShadowVisible: false,
             }}
             component={SignupModal}
+          />
+          <Stack.Screen
+            name="ProfileSetup"
+            options={{
+              headerTitle: 'Perfiles y más',
+              headerShadowVisible: false,
+              headerTintColor: '#fff',
+              headerStyle: {
+                backgroundColor: '#000000',
+              }
+            }}
+            component={ProfileSetup}
           />
         </Stack.Group>
       </Stack.Navigator>

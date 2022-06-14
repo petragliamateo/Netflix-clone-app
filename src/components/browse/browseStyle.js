@@ -6,8 +6,12 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: '40%',
     paddingHorizontal: '10%',
+    height: '100%',
+    width: '100%',
+    maxWidth: '800px',
+    marginHorizontal: 'auto',
+    marginVertical: '50px',
   },
   title: {
     color: '#ffffff',

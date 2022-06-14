@@ -6,7 +6,7 @@ import styles from './jumbotronStyle';
 
 export default function Jumbotron() {
   return (
-    <View>
+    <View style={styles.container}>
 
       {jumboData.map((item) => (
         <Text style={styles.inner} key={item.id}>

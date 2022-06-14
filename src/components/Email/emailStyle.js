@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   },
   input: {
     backgroundColor: 'white',
-    maxWidth: '100%',
+    maxWidth: '500px',
     borderWidth: '0',
     padding: '10px',
     height: '36px',

@@ -9,6 +9,8 @@ const styles = StyleSheet.create({
     height: '100%',
     paddingHorizontal: '25px',
     paddingVertical: '50px',
+    maxWidth: '800px',
+    marginHorizontal: 'auto',
   },
   error: {
     backgroundColor: 'orange',

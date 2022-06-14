@@ -40,6 +40,9 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     margin: '20px',
     color: '#999999',
+    width: '100%',
+    maxWidth: '800px',
+    marginHorizontal: 'auto',
   },
 
   mainCategory: {
