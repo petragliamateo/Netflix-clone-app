@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from 'react-native-web';
+import { Image } from 'react-native';
 
 export default function LogoImage({
   width = 100, height, radius = 0, src = 'https://logodownload.org/wp-content/uploads/2014/10/netflix-logo-5.png',

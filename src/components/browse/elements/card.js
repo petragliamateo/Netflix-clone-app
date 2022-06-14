@@ -13,9 +13,8 @@ const styles = StyleSheet.create({
   ventana: {
     marginHorizontal: 20,
     marginVertical: 'auto',
-    backgroundColor: '#454545',
-    borderRadius: 20,
-    padding: 35,
+    backgroundColor: '#252525',
+    padding: '20px',
     alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: {
@@ -28,7 +27,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Card({ content, type }) {
+export default function Card({ content, type, width = 100 }) {
   const [showFeature, setShowFeature] = useState(false);
   const {
     title, genre, slug, maturity, description,
@@ -39,7 +38,7 @@ export default function Card({ content, type }) {
       onPress={() => setShowFeature((prev) => !prev)}
       style={styles.card}
     >
-      <LogoImage src={getImage(type, genre, slug, 'small')} width={100} height={150} radius={10} />
+      <LogoImage src={getImage(type, genre, slug, 'small')} width={width} height={width * 1.5} radius={3} />
 
       <Modal
         visible={showFeature}
@@ -47,10 +46,28 @@ export default function Card({ content, type }) {
         onRequestClose={() => setShowFeature((prev) => !prev)}
       >
         <Pressable style={styles.ventana}>
-          <Text>{title}</Text>
-          <Text>{`año-${maturity}-temporadas`}</Text>
-          <Text>{description}</Text>
-          <LogoImage src={getImage(type, genre, slug, 'large')} width={300} height={200} radius={10} />
+          <LogoImage src={getImage(type, genre, slug, 'large')} width={300} height={150} radius={3} />
+          <Text
+            style={{
+              color: '#ffffff', fontSize: '18px', width: '100%', textAlign: 'left', marginTop: '10px',
+            }}
+          >
+            {title}
+          </Text>
+          <Text
+            style={{
+              color: '#cccccc', fontSize: '12px', width: '100%', textAlign: 'left', marginVertical: '10px',
+            }}
+          >
+            {`${maturity}+  ${genre}`}
+          </Text>
+          <Text
+            style={{
+              color: '#ffffff', fontSize: '14px', width: '100%', textAlign: 'left', marginBottom: '5px',
+            }}
+          >
+            {description}
+          </Text>
         </Pressable>
       </Modal>
     </Pressable>

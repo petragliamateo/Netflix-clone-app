@@ -2,20 +2,20 @@ import { Text, View } from 'react-native';
 import LogoImage from '../../LogoImage';
 import { styles } from './elementsStyle';
 import { plus, info, play } from '../../../../public/images';
+import Card from './card';
 
-export default function Main() {
+export default function Main({ randomItem, type }) {
   return (
     <Text style={styles.mainContainer}>
-      <LogoImage />
+
+      <Card content={randomItem} type={type} width={200} />
 
       <Text style={styles.mainCategory}>
-        <Text>categoria 1</Text>
+        <Text>{randomItem.title}</Text>
         <Text style={styles.dot} />
-        <Text>categoria 2</Text>
+        <Text>{randomItem.genre}</Text>
         <Text style={styles.dot} />
-        <Text>categoria 3</Text>
-        <Text style={styles.dot} />
-        <Text>categoria 4</Text>
+        <Text>{`${randomItem.maturity}+`}</Text>
       </Text>
 
       <View style={styles.mainButtonsContainer}>

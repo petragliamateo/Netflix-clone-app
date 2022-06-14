@@ -44,13 +44,15 @@ export const styles = StyleSheet.create({
 
   mainCategory: {
     width: '100%',
+    maxWidth: '800px',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: '30px',
+    marginTop: '20px',
     fontSize: '12px',
-    padding: '20px',
+    paddingVertical: '20px',
+    paddingHorizontal: '60px',
   },
   dot: {
     height: '3px',
@@ -61,12 +63,12 @@ export const styles = StyleSheet.create({
 
   mainButtonsContainer: {
     width: '100%',
+    maxWidth: '800px',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '20px',
-    marginVertical: '10px',
+    paddingHorizontal: '60px',
   },
   iconsButton: {
     width: '60px',

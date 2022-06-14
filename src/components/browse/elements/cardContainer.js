@@ -9,16 +9,13 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
   },
-  row: {
-    paddingLeft: '10px',
-  },
   text: {
     color: '#ffffff',
     width: '100%',
     textAlign: 'left',
     fontSize: '16px',
     fontWeight: '500',
-    padding: '10px',
+    paddingHorizontal: '10px',
   },
 });
 
@@ -26,7 +23,7 @@ export default function CardContainer({ set, type }) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>{set.title}</Text>
-      <ScrollView horizontal style={styles.row}>
+      <ScrollView horizontal style={{ paddingLeft: '5px' }}>
         {
           set.data.map((item) => (
             <View key={`${item.genre}-${item.title.toLowerCase()}`}>

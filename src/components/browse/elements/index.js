@@ -7,6 +7,12 @@ import CardContainer from './cardContainer';
 export default function BrowsePage({
   profile, slideRows, setCategory, category,
 }) {
+  const randomSet = slideRows[Math.floor(Math.random() * slideRows.length)];
+  const typeOfRandom = category !== '' ? category : (
+    slideRows.indexOf(randomSet) < 5 ? 'series' : 'films'
+  );
+  const randomItem = randomSet.data[Math.floor(Math.random() * randomSet.data.length)];
+
   return (
     <ScrollView
       StickyHeaderComponent
@@ -21,7 +27,7 @@ export default function BrowsePage({
         setCategory={setCategory}
       />
 
-      <Main />
+      <Main randomItem={randomItem} type={typeOfRandom} />
 
       {
         slideRows.map((item) => {
